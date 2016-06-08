@@ -4,9 +4,9 @@ require 'capybara/rspec'
 feature 'players can fill-in names, submit and see' do
   scenario 'two players fill-in names' do
     visit '/'
-    fill_in('Player One name', with: 'Aquarious')
-    fill_in('Player Two name', with: 'Pisces')
+    fill_in('player_one_name', with: 'Aquarious')
+    fill_in('player_two_name', with: 'Pisces')
     click_button('Submit')
-    expect(page).should (have_content('Aquarious') && have_content('Pisces'))
+    expect(page).to have_content('Aquarious vs Pisces')
   end
 end
