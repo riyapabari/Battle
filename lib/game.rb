@@ -18,11 +18,7 @@ class Game
 		@current_turn = opponent_of(current_turn)
 	end
 
-	def attack
-		opponent_of(current_turn).receive_damage
-	end
 
-	private
 
 	def opponent_of(the_player)
 		@players.select { |p| p != the_player}.first

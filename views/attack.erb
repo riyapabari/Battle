@@ -5,6 +5,8 @@
 <h1><%=@game.player_2.name%> attacked <%=@game.player_1.name%>!</h1>
 <% end %>
 
+
+
 <form action="/switch_turns" method="post">
   <input type="submit" name="OK" value="OK">
 </form>

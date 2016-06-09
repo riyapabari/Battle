@@ -13,17 +13,13 @@ describe 'hit points' do
 
   it 'reduces player_2 points by 10' do
     sign_in_and_play
-    click_link 'Attack'
-    click_button 'OK'
+    attack_and_confirm
     expect(page).to have_content("Carlos: 50HP")
   end
 
   it 'reduces player_2 points by 10' do
     sign_in_and_play
-    click_link 'Attack'
-    click_button 'OK'
-    click_link 'Attack'
-    click_button 'OK'
+    2.times { attack_and_confirm }
     expect(page).to have_content("Steve: 50HP")
 
   end
