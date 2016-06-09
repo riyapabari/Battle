@@ -4,3 +4,4 @@ feature "Player 1 can see Player 2's hitpoints" do
     expect(page).to have_content("Pisces's Hit Points")
   end
 end
+
