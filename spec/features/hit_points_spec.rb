@@ -11,16 +11,16 @@ describe 'hit points' do
     expect(page).to have_content("Steve: 60HP")
   end
 
-  it 'reduces player_2 points by 10' do
+  it 'reduces player_2 points by random_damage_amount' do
     sign_in_and_play
     attack_and_confirm
-    expect(page).to have_content("Carlos: 50HP")
+    expect(page).not_to have_content("Carlos: 60HP")
   end
 
-  it 'reduces player_2 points by 10' do
+  it 'reduces player_1 points by random_damage_amount' do
     sign_in_and_play
     2.times { attack_and_confirm }
-    expect(page).to have_content("Steve: 50HP")
+    expect(page).not_to have_content("Steve: 60HP")
 
   end
 
