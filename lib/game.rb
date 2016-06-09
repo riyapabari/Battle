@@ -18,8 +18,8 @@ class Game
 		@current_turn = opponent_of(current_turn)
 	end
 
-	def attack(player)
-		player.receive_damage
+	def attack
+		opponent_of(current_turn).receive_damage
 	end
 
 	private
