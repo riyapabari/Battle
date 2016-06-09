@@ -28,6 +28,7 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
+    Attack.run(@game.current_turn) if @game.player_2.name == "Computer"
     Attack.run(@game.opponent_of(@game.current_turn))
     if @game.game_over?
       redirect '/game_over'
