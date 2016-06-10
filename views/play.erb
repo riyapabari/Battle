@@ -2,6 +2,19 @@
 <%= @game.current_player.name %> vs <%= @game.opponent.name %>
 
 <BR>
+<% if @game.turn > 0 %>
+<%= @game.opponent.name %> attacked <%= @game.current_player.name %>
+<% end %>
+
+<BR>
+
+<%= @game.opponent.name %>'s Hit Points: <%= @game.opponent.hit_points %>
+
+<BR>
+
+<%= @game.current_player.name %>'s Hit Points: <%= @game.current_player.hit_points %>
+
+<BR>
 
 It is <%= @game.current_player.name %>'s turn
 
