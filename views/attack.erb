@@ -6,6 +6,10 @@
 
 <BR>
 
+<%= @game.current_player.name %>'s Hit Points: <%= @game.current_player.hit_points %>
+
+<BR>
+
 <form action='/switch' method = 'post'>
   <input type='submit' value='Switch Turn'>
 </form>
